@@ -25,6 +25,12 @@ def user_settings():
     if request.method == 'GET':
         return render_template('user-settings.html')
 
+@app.route('/event-details', methods=['GET', 'POST'])
+def event_details():
+    if request.method == 'GET':
+        return render_template('event-details.html')
+        
+
 if __name__ == '__main__':
     app.run()
     port = int(os.getenv('PORT', 5000))

@@ -15,7 +15,7 @@ body{
 .wrapper,
 .wrapper .img-area,
 .icons a,
-.buttons button{
+.buttons > a{
   background: #ecf0f3;
   box-shadow: -3px -3px 7px #ffffff,
                3px 3px 5px #ceced1;
@@ -105,7 +105,7 @@ body{
 }
 .icons a:hover::before,
 .wrapper .icon:hover::before,
-.buttons button:hover:before{
+.buttons a:hover:before{
   content: "";
   position: absolute;
   top: 0;
@@ -117,7 +117,7 @@ body{
   box-shadow: inset -3px -3px 7px #ffffff,
               inset 3px 3px 5px #ceced1;
 }
-.buttons button:hover:before{
+.buttons a:hover:before{
   z-index: -1;
   border-radius: 5px;
 }
@@ -158,7 +158,7 @@ body{
   justify-content:center;
   align-items:center;
 }
-.buttons button{
+.buttons a{
   position: relative;
   width: 100%;
   border: none;
@@ -172,6 +172,8 @@ body{
   z-index: 4;
   margin-top: 8px;
   margin-bottom: 8px;
+  text-align: left;
+  text-decoration: none;
 }
 
 .button-container img{
@@ -181,7 +183,8 @@ body{
 
 .button-container span{
   vertical-align: bottom;
-  
+  color: #31344b;
+  text-align: left;
 }
 
 .button-container {
@@ -196,4 +199,3 @@ body{
   opacity: 1;
   pointer-events: auto;
 }
-
