@@ -27,5 +27,7 @@ def user_settings():
 
 if __name__ == '__main__':
     app.run()
+
     port = int(os.getenv('PORT', 5000))
+
 

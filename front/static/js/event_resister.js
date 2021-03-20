@@ -11,4 +11,5 @@ GE('resister_btn').addEventListener('click',()=>{
         console.error("Error writing document: ", error);
         window.alert(error)
     })
+
 })

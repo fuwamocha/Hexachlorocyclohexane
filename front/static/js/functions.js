@@ -6,5 +6,5 @@ function GetCookie(str){
 }
 function AddCookie(key,val){
     document.cookie = key+"="+val
-}
 
+}

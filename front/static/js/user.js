@@ -14,3 +14,4 @@ firebase.auth().onAuthStateChanged(function(user) {
         //TODO ユーザーIDが自分だった場合
     }
 })
+

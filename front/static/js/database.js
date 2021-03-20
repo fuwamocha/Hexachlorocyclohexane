@@ -50,6 +50,3 @@ function Send(method,dic,callback){
   function randint(max) {
     return Math.floor(Math.random() * Math.floor(max));
   }
-  
-
-  
