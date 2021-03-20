@@ -59,6 +59,7 @@ body, html {
     box-sizing: border-box;
     transition: all 0.2s ease-in-out;
   }
+  
   input:focus {
     box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
   }
@@ -69,6 +70,7 @@ body, html {
     font-weight: bold;
     box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #BABECC;
     transition: all 0.2s ease-in-out;
+    width: 128px;
     cursor: pointer;
     font-weight: 600;
   }
@@ -94,7 +96,11 @@ body, html {
   button.unit .icon {
     margin-right: 0;
   }
-  
+  .red {
+    display: block;
+    width: 100%;
+    color: #AE1100;
+  }
   .icon-up {
     transform: rotate(0);
     transition: transform 398ms cubic-bezier(0.69, 0.29, 0.58, 1);
