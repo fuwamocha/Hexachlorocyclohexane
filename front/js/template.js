@@ -1,6 +1,6 @@
 //ログイン
 email='hoge@example.com'
-password='qwertyws'
+password='qwerty'
 callback=(user_data)=>{
     console.log('callbacked')
 }
