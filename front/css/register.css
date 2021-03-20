@@ -1,0 +1,108 @@
+body, html {
+    background-color: #EBECF0;
+  }
+  
+  body, p, input, select, textarea, button {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.2px;
+    font-size: 16px;
+  }
+  
+  div, p {
+    color: #BABECC;
+    text-shadow: 1px 1px 1px #FFF;
+  }
+  
+  form {
+    padding: 16px;
+    width: 500px;
+    margin: 0 auto;
+    box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #BABECC;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+  }
+  
+  .segment {
+    padding: 32px 0;
+    text-align: center;
+  }
+  
+  button, input {
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    border-radius: 320px;
+    padding: 16px;
+    background-color: #EBECF0;
+    text-shadow: 1px 1px 0 #FFF;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 24px;
+    width: 100%;
+  }
+  
+  .text {
+    color: #61677C;
+    font-size: 14px;
+    float: left;
+    margin-left: 14px;
+  }
+  
+  input {
+    margin-right: 8px;
+    box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+  }
+  input:focus {
+    box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+  }
+  
+  
+  button {
+    color: #61677C;
+    font-weight: bold;
+    box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #BABECC;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  button:hover {
+    box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
+  }
+  button:active {
+    box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+  }
+  button.icon {
+    margin-right: 8px;
+  }
+  button.unit {
+    border-radius: 24px;
+    line-height: 0;
+    padding: 24px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 8px;
+    font-size: 19.2px;
+  }
+  button.unit .icon {
+    margin-right: 0;
+  }
+  
+  .icon-up {
+    transform: rotate(0);
+    transition: transform 398ms cubic-bezier(0.69, 0.29, 0.58, 1);
+  }z
+  .icon-down {
+    transform: rotate(-90deg);
+    transition: transform 597ms cubic-bezier(0.83, 0.23, 0.15, 0.83);
+    transition-delay: 399ms;
+  }
+  
+  
