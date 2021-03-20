@@ -10,3 +10,4 @@ firebase.auth().onAuthStateChanged(function(user) {
         location.href='login.html'
     }
 });
+

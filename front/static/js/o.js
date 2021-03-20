@@ -20,3 +20,4 @@ callback=(res)=>{
 
 method='add'
 Send(method,dic,callback)
+
