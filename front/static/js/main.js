@@ -7,7 +7,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         emailVerified = user.emailVerified;
         uid=user.uid;
     }else{
-        location.href='login.html'
+        location.href='login/'
     }
 });
 
