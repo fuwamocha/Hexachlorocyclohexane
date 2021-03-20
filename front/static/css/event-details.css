@@ -58,6 +58,7 @@ h4{
   font-size: 30px;
 } */
 .wrapper .icon.dots{
+  top:30px;
   right: 70px;
   font-size: 50px;
 }
