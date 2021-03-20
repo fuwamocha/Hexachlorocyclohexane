@@ -1,0 +1,14 @@
+user
+uid -> username,email,gender,religion,age_group,github,twitter,instagram,qiita,introduction
+
+event_secret
+secret -> event_id,name
+
+event_to_user
+?? -> event_id,uid,username,iconpath
+
+event
+event_id -> title,date,place,description(,tag)
+
+Auth
+name,email,photoUrl,emailVerified,uid

@@ -10,7 +10,9 @@ db.collection("user").get().then((querySnapshot) => {
 });
 
 firebase.auth().onAuthStateChanged(function(user) {
-    if (uid==user.uid){
+    if (my_uid==uid){
         //TODO ユーザーIDが自分だった場合
     }
 })
+
+

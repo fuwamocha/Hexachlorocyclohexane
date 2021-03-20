@@ -1,11 +1,11 @@
-var name,email,photoUrl,emailVerified,uid
+var myname,my_email,photoUrl,emailVerified,my_uid
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-        name = user.displayName;
-        email = user.email;
+        myname = user.displayName;
+        my_email = user.email;
         photoUrl = user.photoURL;
         emailVerified = user.emailVerified;
-        uid=user.uid;
+        my_uid=user.uid;
     }else{
         location.href='login/'
     }
