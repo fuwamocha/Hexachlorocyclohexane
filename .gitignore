@@ -1,3 +1,4 @@
+
 # General
 .DS_Store
 .AppleDouble
@@ -24,3 +25,7 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+#js
+front/static/js/auth_config.js
+
