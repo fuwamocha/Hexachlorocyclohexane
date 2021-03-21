@@ -71,7 +71,6 @@ a:hover{
 }
 /*ヘッダー*/
 header{
-	background-image:
 	padding:50px 50px;
 	text-align:center;
 	}
@@ -260,8 +259,9 @@ h4{
 	width: 100%;
 	/* width: 1170px; */
 	/* padding: 0 15px;
-	margin: 0 auto; */ 
+	margin: 0 auto;  
 }
+*/
 
 /*テーブル*/
 table{
