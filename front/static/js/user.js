@@ -5,6 +5,9 @@ db.collection("user").doc(uid).get().then((doc) => {
     if (doc.exists) {
         data=doc.data()
         console.log(data)
+        GE('page_title').innerText=data.username+'のマイページ'
+        GE('page_title_h1').innerText=data.username+'のマイページ'
+        
         GE('username').innerText=data.username
         GE('religion').innerText=data.religion
         GE('introduction').innerText=data.introduction
@@ -39,7 +42,7 @@ db.collection("event_to_user").where("uid", "==", uid)
             db.collection("event").doc(doc.data().event_id).get().then((sub_doc) => {
                 sub_doc=sub_doc.data()
                 div=CE('div')
-                div.innerHTML='<h4>'+sub_doc.name+'</h4><details><div>  <i class="fas fa-calendar-day"></i><span>'+sub_doc.date+'</span></div><div><i class="fas fa-map-marker-alt"></i>   <span>'+sub_doc.place+'</span></div><div><i class="fas fa-pager"></i><a href="'+sub_doc.url+'">イベントページ</a></div></details>'    
+                div.innerHTML='<a href="/event?eid='+doc.data().event_id+'"><h4>'+sub_doc.name+'</h4></a><details><div>  <i class="fas fa-calendar-day"></i><span>'+sub_doc.date+'</span></div><div><i class="fas fa-map-marker-alt"></i>   <span>'+sub_doc.place+'</span></div><div><i class="fas fa-pager"></i><a href="'+sub_doc.url+'">イベントページ</a></div></details>'    
                 if(sub_doc.tag=='勉強会'){
                     div.classList.add('study_event')
                     GE('study_events').appendChild(div)
