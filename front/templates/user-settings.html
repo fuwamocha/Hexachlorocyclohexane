@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
     <meta  charset="UTF-8">
     <meta name="viewport" content="width=650">
     <title>イベント参加ログ</title>
-<link rel="stylesheet" href="../static/css/register.css">
+<link rel="stylesheet" href="../static/css/user_settings.css">
 </head>
 
   <body>
@@ -14,22 +14,25 @@
           <h1>プロフィール登録</h1>
         </div>
         <div class="text">
-          <h3>hoge@gmail.com</h3>
+          <h3 id='my_email'>hoge@gmail.com</h3>
         </div>
         <label>
           <!-- </div> -->
-          <input type="text" placeholder="Username">
+          <input id='username_inp' type="text" placeholder="Username">
         </label>
-        <p>
-          <button class="unit" type="button" type="radio" name="dinner" value="男" style="width:18%;" checked>男</button>
-          <button class="unit" type="button" type="radio" name="dinner" value="女" style="width:18%;" checked>女</button>
-          <button class="unit" type="button" type="radio" name="dinner" value="どちらでもない" style="width:18%;" checked>どちらでもない</button>
-          <button class="unit" type="button" type="radio" name="dinner" value="答えたくない" style="width:18%;" checked>答えたくない</button>
-        </p> 
+        <div class="dropdown">
+          <select id='gender_inp' name="gender">
+            <option value="" selected hidden>性別</option>
+            <option value="male">男性</option>
+            <option value="female">女性</option>
+            <option value="other">その他</option>
+            <option value="no">回答しない</option>
+          </select>
+        </div> 
         
         <div class="dropdown">
-          <select name="grade">
-            <option value="" selected>学年</option>
+          <select id='age_group_inp' name="grade">
+            <option value="" selected hidden>学年</option>
             <option value="中学生以下">中学生以下</option>
             <option value="高校1年・高専1年">高校1年・高専1年</option>
             <option value="高校2年・高専2年">高校2年・高専2年</option>
@@ -42,8 +45,8 @@
           </select>
         </div> 
         <div class="dropdown">
-          <select name="pref_name">
-            <option value="" selected>都道府県</option>
+          <select id='religion_inp' name="pref_name">
+            <option value="" selected hidden>都道府県</option>
               <option value="北海道">北海道</option>
               <option value="青森県">青森県</option>
               <option value="岩手県">岩手県</option>
@@ -98,40 +101,40 @@
       <div class="segment">
       <!-- <h1>所持アカウント</h1>           -->
           <div class="text">
-            <h3>Twitter</h3>
+            <h3>Twitter（@はつけないで入力してください）</h3>
           </div>
-          <input type="text" placeholder="@">
+          <input id='twitter_inp' type="text" placeholder="@">
           
           <div class="text" placeholder="@">
             <h3>Instagram</h3>
           </div>
-          <input type="text" placeholder="@">       
+          <input id='instagram_inp' type="text" placeholder="@">       
 
           <div class="text">
             <h3>GitHub</h3>
           </div>
-          <input type="text" placeholder="@">  
+          <input id='github_inp' type="text" placeholder="@">  
       
           <div class="text">
             <h3>Facebook</h3>
           </div>
-          <input type="text" placeholder="@">  
+          <input id='facebook_inp' type="text" placeholder="@">  
 
           <div class="text">
             <h3>LinkedIn</h3>
           </div>
-          <input type="text" placeholder="@"> 
+          <input id='linkedin_inp' type="text" placeholder="@"> 
 
           <div class="text">
             <h3>自己紹介</h3>
           </div>
           <!-- <input type="text">  -->
 
-          <textarea name="self_introduction" cols="30" rows="4"></textarea>
+          <textarea id='introduction_inp' name="self_introduction" cols="30" rows="4"></textarea>
 
         </div>
       <div class="register">
-      <button class="red" type="button">登録</button>
+      <button id='update_btn' class="red" type="button">登録</button>
       </div>
     </form>
 

@@ -1,38 +1,67 @@
 firebase.auth().onAuthStateChanged(function(user) {
+    
+    db.collection("user").doc(my_uid).get()
+    .then((doc) => {
+        if (doc.exists) {
+            data=doc.data()
+            GE('username_inp').value=data.username
+            document.querySelector('option[value='+data.gender+']').selected=true
+            document.querySelector('option[value='+data.age_group+']').selected=true
+            document.querySelector('option[value='+data.religion+']').selected=true
+            GE('github_inp').value=data.github
+            GE('twitter_inp').value=data.twitter
+            GE('instagram_inp').value=data.instagram
+            GE('facebook_inp').value=data.facebook
+            GE('linkedin_inp').value=data.linkedin
+            GE('introduction_inp').value=data.introduction
+        } else {
+            // doc.data() will be undefined in this case
+            console.log("No such document!");
+            window.alert('event not found')
+        }
+    }).catch((error) => {
+        console.log("Error getting document:", error);
+    });
+
+    GE('my_email').innrText=my_email
     GE('update_btn').addEventListener('click',()=>{
+        r=Randint(4)+1
+        g=GE('gender_inp').options[GE('gender_inp').selectedIndex].value
+        if(g=='male'){
+            photoURL='../static/img/man'+r+'.png'
+        }else if(g=='femele'){
+            photoURL='../static/img/woman'+r+'.png'
+        }else{
+            photoURL='../static/img/human.png'
+        }
+        
         user.updateProfile({
-            displayName: 'hoge',//GE('username_inp').value,
+            displayName:GE('username_inp').value,
             photoURL: 'man1.png',///TODO:情報によって変える
         }).then(function() {
         // Update successful.
         }).catch(function(error) {
             window.alert(error)
         });
-    
-        db.collection("user").doc(uid).set({
-            /*
+
+        db.collection("user").doc(my_uid).set({
             icpnpath:'man1.png',
             username: GE('username_inp').value,
-            email: GE('email_inp').value,
-            gender: GE('gender_inp').value,
-            age_group: GE('age_group_inp').value, 
-            religion:  GE('religion_inp').value,
+            email: my_email,
+            gender: GE('gender_inp').options[GE('gender_inp').selectedIndex].value,
+            age_group:GE('age_group_inp').options[GE('age_group_inp').selectedIndex].value,
+            religion:GE('religion_inp').options[GE('religion_inp').selectedIndex].value,
             github:GE('github_inp').value,
             twitter:GE('twitter_inp').value,
             instagram:GE('instagram_inp').value,
-            qiita:GE('qiita_inp').value,
+            facebook:GE('facebook_inp').value,
+            linkedin:GE('linkedin_inp').value,
             introduction:GE('introduction_inp').value,
-            */
-           username:'fuga',
-           email:'fuga@example.com',
-           gender:'female',
-           religion:'東京',
-           age_group:'20',
-           twitter:'example',
-           introduction:'いえーい',
         })
         .then(() => {
             console.log("Document successfully written!");
+            location.href='user?uid='+my_uid
+            AddCookie('profile_done','done')
         })
         .catch((error) => {
             console.error("Error writing document: ", error);
@@ -42,4 +71,6 @@ firebase.auth().onAuthStateChanged(function(user) {
 });
 
 
-
+if(GetCookie('profile_done')){
+    location.href='user?uid='+my_uid
+}
