@@ -16,19 +16,19 @@ firebase.auth().onAuthStateChanged(function(user) {
         } else {
             // doc.data() will be undefined in this case
             console.log("No such document!");
-            GE('update_btn').innrText='登録'
+            GE('update_btn').innerText='登録'
         }
     }).catch((error) => {
         console.log("Error getting document:", error);
     });
 
-    GE('my_email').innrText=my_email
+    GE('my_email').innerText=my_email
     GE('update_btn').addEventListener('click',()=>{
         r=Randint(4)+1
         g=GE('gender_inp').options[GE('gender_inp').selectedIndex].value
         if(g=='male'){
             photoURL='../static/img/man'+r+'.png'
-        }else if(g=='femele'){
+        }else if(g=='female'){
             photoURL='../static/img/woman'+r+'.png'
         }else{
             photoURL='../static/img/normal.png'
