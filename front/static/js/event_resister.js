@@ -2,7 +2,7 @@ var event_id
 GE('resister_btn').addEventListener('click',()=>{
     event_id=RandomStr(12)
     db.collection("event").doc(event_id).set({
-        title: GE('name_inp').value,
+        name: GE('name_inp').value,
         date:GE('date_inp').value,
         place:GE('place_inp').value,
         tag:GetRadio(),
@@ -30,7 +30,7 @@ function SetSecret(){
     .then(() => {
         window.alert('登録完了!\nイベントSecretは「'+secret+'」です。\n仲間たちに伝えましょう！')
         console.log("Document successfully written!");
-        location.href='/home'
+        location.href='/user?uid='+my_uid
     })
     .catch((error) => {
         console.error("Error writing document: ", error);

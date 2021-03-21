@@ -8,52 +8,54 @@
 </head>
 <body>
   
-
-  <form id='form' class="form">
-    <div class="form__field">
-      <div class="input-group">
-        <label class="input-group__label">勉強会 or ハッカソン</label>
-        <input id="radio-a" type="radio" name="event-type" class='radio1' value="勉強会" checked><label for="radio-a">勉強会</label><br>
-        <input id="radio-b" type="radio" name="event-type" class='radio1' value="ハッカソン"><label for="radio-b">ハッカソン</label><br>
-      </div>
-
-      <div class="input-group">
-        <label class="input-group__label">イベント名</label>
-          <input id='name_inp' class="input-group__input" type="text" required>
-      </div>
-    
-      <div class="input-group">
-        <label class="input-group__label">イベント詳細</label>
-            <input id='description_inp' class="input-group__input" type="text" required>
-      </div>
-<!--
-      <div class="input-group">
-        <label class="input-group__label">イベントID</label>
+  <div class='container'>
+    <form id='form' class="form">
+      <div class="form__field">
+        <div class="input-group">
+          <label class="input-group__label">勉強会 or ハッカソン</label>
+          <input id="radio-a" type="radio" name="event-type" class='radio1' value="勉強会" checked><label for="radio-a">勉強会</label><br>
+          <input id="radio-b" type="radio" name="event-type" class='radio1' value="ハッカソン"><label for="radio-b">ハッカソン</label><br>
+        </div>
+  
+        <div class="input-group">
+          <label class="input-group__label">イベント名</label>
+            <input id='name_inp' class="input-group__input" type="text" required>
+        </div>
+      
+        <div class="input-group">
+          <label class="input-group__label">イベント詳細</label>
+              <input id='description_inp' class="input-group__input" type="text" required>
+        </div>
+  <!--
+        <div class="input-group">
+          <label class="input-group__label">イベントID</label>
+              <input class="input-group__input" type="text" required>
+        </div>
+  -->        
+        <div class="input-group">
+          <label class="input-group__label">日時</label>
+            <input id='date_inp' class="input-group__input" type="date" required>
+        </div>
+          
+        <div class="input-group">
+          <label class="input-group__label">場所</label>
+              <input id='place_inp' class="input-group__input" type="text" required>
+        </div>
+      
+        <!-- <div class="input-group">
+          <label class="input-group__label">タグ</label>
             <input class="input-group__input" type="text" required>
-      </div>
--->        
-      <div class="input-group">
-        <label class="input-group__label">日時</label>
-          <input id='date_inp' class="input-group__input" type="date" required>
-      </div>
+      　</div> -->
         
-      <div class="input-group">
-        <label class="input-group__label">場所</label>
-            <input id='place_inp' class="input-group__input" type="text" required>
-      </div>
-    
-      <!-- <div class="input-group">
-        <label class="input-group__label">タグ</label>
-          <input class="input-group__input" type="text" required>
-    　</div> -->
-      
-      <div class="input-group">
-        <label class="input-group__label">イベントURL</label>
-          <input id='url_inp' class="input-group__input" type="url" required>
-      </div>
-      
-    <button id='resister_btn' class="button" type="button">登録</button>
-  </form>
+        <div class="input-group">
+          <label class="input-group__label">イベントURL</label>
+            <input id='url_inp' class="input-group__input" type="url" required>
+        </div>
+        
+      <button id='resister_btn' class="button" type="button">登録</button>
+    </form>
+  </div>
+
 
 
   <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
