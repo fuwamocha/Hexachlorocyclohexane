@@ -53,7 +53,7 @@ function ERR_Callback(error){
 
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-        location.href='/'
+        location.href='/user-settings'
     }
 });
 

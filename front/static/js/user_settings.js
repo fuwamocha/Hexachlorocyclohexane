@@ -11,6 +11,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     
         db.collection("user").doc(uid).set({
             /*
+            icpnpath:'man1.png',
             username: GE('username_inp').value,
             email: GE('email_inp').value,
             gender: GE('gender_inp').value,
@@ -22,13 +23,13 @@ firebase.auth().onAuthStateChanged(function(user) {
             qiita:GE('qiita_inp').value,
             introduction:GE('introduction_inp').value,
             */
-           username:'hoge',
-           email:'hoge@example.com',
-           gender:'man',
-           religion:'愛知',
-           age_group:'10',
-           github:'maltonn',
-           introduction:'よろしくお願いします！',
+           username:'fuga',
+           email:'fuga@example.com',
+           gender:'female',
+           religion:'東京',
+           age_group:'20',
+           twitter:'example',
+           introduction:'いえーい',
         })
         .then(() => {
             console.log("Document successfully written!");

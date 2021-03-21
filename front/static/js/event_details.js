@@ -8,17 +8,19 @@ db.collection("event_to_user").where("event_id", "==", event_id)
     .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
             data=doc.data()
+            console.log(data)
             card=CE('a')
-            card.href=data.userid
+            card.href='user?uid='+data.uid
             div=CE('div')
+            div.classList.add('button-container')
             img=CE('img')
             img.src=data.iconpath
             span=CE('span')
             span.innerText=data.username
             div.appendChild(img)
             div.appendChild(span)
-            a.appendChild(div)
-            GE('users_container').appendChild(a)
+            card.appendChild(div)
+            GE('users_container').appendChild(card)
         })
     })
     .catch((error) => {
