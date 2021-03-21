@@ -8,7 +8,7 @@
 
 ## How to use
 1. Flaskのインストール
-2. static/js/config.firebaseConfigを記載
+2. static/js/config.jsにfirebaseConfigを追加
 ```
 var firebaseConfig = {
   apiKey: "xxxxxxxxxxxxxx",
