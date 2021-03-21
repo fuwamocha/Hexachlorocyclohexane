@@ -30,7 +30,7 @@ db.collection("user").doc(uid).get().then((doc) => {
 
 firebase.auth().onAuthStateChanged(function(user) {
     if (my_uid!=uid){
-        GE('add_event_btn').outerHTML=''
+        GE('plus').outerHTML=''
         GE('user_settings_btn').outerHTML=''
     }
 })

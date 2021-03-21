@@ -3,7 +3,7 @@ GE('add_event_btn').addEventListener('click',()=>{
     db.collection("event_secret").doc(GE('secret_inp').value).get().then((doc) => {
         if (doc.exists) {
             console.log("Document data:", doc.data());
-            db.collection("event_to_user").add({
+            db.collection("event_to_user").doc(event_id+'-'+my_uid).set({
                 event_id: doc.data().event_id,
                 uid:my_uid,
                 username:myname,

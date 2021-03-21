@@ -31,7 +31,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         }else if(g=='femele'){
             photoURL='../static/img/woman'+r+'.png'
         }else{
-            photoURL='../static/img/human.png'
+            photoURL='../static/img/normal.png'
         }
         
         user.updateProfile({
