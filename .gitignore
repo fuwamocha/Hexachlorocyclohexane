@@ -27,4 +27,4 @@ Temporary Items
 .apdisk
 
 #js
-front/static/js/auth_config.js
+static/js/config.js
