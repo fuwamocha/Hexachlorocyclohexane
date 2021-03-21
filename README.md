@@ -8,7 +8,7 @@
 
 ## How to use
 1. Flaskのインストール
-1. static/js/config.firebaseConfigを記載
+2. static/js/config.firebaseConfigを記載
 ```
 var firebaseConfig = {
   apiKey: "xxxxxxxxxxxxxx",
@@ -25,4 +25,4 @@ firebase.analytics();
 db = firebase.firestore();
 ```
 
-1. ```app.py```を実行した後にlocalhost:5000にアクセス
+3. ```app.py```を実行した後にlocalhost:5000にアクセス
