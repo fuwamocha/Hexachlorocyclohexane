@@ -4,9 +4,8 @@ function LogIn(email,password) {
             console.log(user)
         })
         .catch((error) => {
-            var errorCode = error.code;
-            var errorMessage = error.message;
             console.warn(error)
+            window.alert(error.message)
         });
 }
 
@@ -52,6 +51,7 @@ function ERR_Callback(error){
 }
 
 firebase.auth().onAuthStateChanged(function(user) {
+    console.log(user)
     if (user) {
         location.href='/user-settings'
     }

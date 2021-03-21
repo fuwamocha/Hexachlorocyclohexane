@@ -1,4 +1,5 @@
 GE('add_event_btn').addEventListener('click',()=>{
+    console.log(GE('secret_inp').value)
     db.collection("event_secret").doc(GE('secret_inp').value).get().then((doc) => {
         if (doc.exists) {
             console.log("Document data:", doc.data());

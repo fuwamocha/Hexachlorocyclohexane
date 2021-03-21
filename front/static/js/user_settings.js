@@ -1,5 +1,4 @@
 firebase.auth().onAuthStateChanged(function(user) {
-    
     db.collection("user").doc(my_uid).get()
     .then((doc) => {
         if (doc.exists) {
@@ -17,7 +16,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         } else {
             // doc.data() will be undefined in this case
             console.log("No such document!");
-            window.alert('event not found')
+            GE('update_btn').innrText='登録'
         }
     }).catch((error) => {
         console.log("Error getting document:", error);
@@ -37,7 +36,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         
         user.updateProfile({
             displayName:GE('username_inp').value,
-            photoURL: 'man1.png',///TODO:情報によって変える
+            photoURL: photoURL,
         }).then(function() {
         // Update successful.
         }).catch(function(error) {
@@ -45,7 +44,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         });
 
         db.collection("user").doc(my_uid).set({
-            icpnpath:'man1.png',
+            iconpath:photoURL,
             username: GE('username_inp').value,
             email: my_email,
             gender: GE('gender_inp').options[GE('gender_inp').selectedIndex].value,
@@ -60,8 +59,10 @@ firebase.auth().onAuthStateChanged(function(user) {
         })
         .then(() => {
             console.log("Document successfully written!");
-            location.href='user?uid='+my_uid
-            AddCookie('profile_done','done')
+            if(my_uid){
+                location.href='user?uid='+my_uid
+            }
+            //AddCookie('profile_done','done')
         })
         .catch((error) => {
             console.error("Error writing document: ", error);
@@ -70,7 +71,9 @@ firebase.auth().onAuthStateChanged(function(user) {
     })
 });
 
-
+/*
 if(GetCookie('profile_done')){
     location.href='user?uid='+my_uid
 }
+
+*/

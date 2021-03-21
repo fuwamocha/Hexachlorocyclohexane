@@ -8,19 +8,32 @@ def just_call():
 @app.route('/', methods=['GET', 'POST'])
 def Main():
     if request.method == 'GET':
+        return render_template('login.html')
+
+    
+@app.route('/home', methods=['GET', 'POST'])
+def home():
+    if request.method == 'GET':
         return render_template('home.html')
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'GET':
         return render_template('login.html')
 
+@app.route('/user', methods=['GET', 'POST'])
+def profile():
+    if request.method == 'GET':
+        return render_template('user.html')
+
+
 @app.route('/user-settings', methods=['GET', 'POST'])
 def user_settings():
     if request.method == 'GET':
         return render_template('user-settings.html')
 
-@app.route('/event-details', methods=['GET', 'POST'])
+@app.route('/event', methods=['GET', 'POST'])
 def event_details():
     if request.method == 'GET':
         return render_template('event-details.html')
@@ -34,19 +47,6 @@ def event_resister():
 def friends():
     if request.method == 'GET':
         return render_template('friends.html')
-
-    
-@app.route('/home', methods=['GET', 'POST'])
-def home():
-    if request.method == 'GET':
-        return render_template('home.html')
-
-
-@app.route('/user', methods=['GET', 'POST'])
-def profile():
-    if request.method == 'GET':
-        return render_template('user.html')
-
 
 
 if __name__ == '__main__':
