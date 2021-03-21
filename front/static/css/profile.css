@@ -6,6 +6,9 @@
 	background-color: #ECF0F3;
 }
 
+header {
+	padding-top: 30px;
+}
 
 body{
 	width:100%;
@@ -32,10 +35,10 @@ a{
 	color:#4267b2;
 }
 
-a:hover{
+/* a:hover{
 	color:#333;
 	background-color:#666;
-}
+} */
 
 .cf:after{
 	display:block;
@@ -78,6 +81,9 @@ header{
 	
 header h1{
 	font-size:2em;
+	font-family: "游ゴシック", BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+	color:#333;
+
 	
 }
 
@@ -99,6 +105,7 @@ h2:first-letter{
 .profile{
 	margin-bottom: 10px;
 	padding: 30px;
+	min-height: 250px;
 	background: #ecf0f3;
 	box-shadow: inset -3px -3px 7px #ffffff,
 				inset 3px 3px 5px #ceced1;	
@@ -392,7 +399,7 @@ td{
 	position: relative;
 	width: 70%;
 	max-width: 600px;
-	padding: 30px 30px 15px;
+	padding: 0px 0px 0px;
 	border-radius: 2px;
 	background: #fff;
 	box-shadow: 0 0 30px rgba(0, 0, 0, .6);
@@ -433,3 +440,75 @@ td{
   .modal-wrapper .modal-close:hover {
 	color: #2b2e38 !important
   }
+
+  /* モーダルの中身のフォーム */
+.form {
+	display: block;
+	width: 100%px;
+	height: auto;
+	padding: 32px;
+	background-color: #ebecf0;
+	border-radius: 13px;
+	box-shadow: 3px 3px 5px #babecc, -5px -5px 10px #fff;
+}
+.form__field {
+	display: grid;
+	gap: 24px;
+	margin-bottom: 32px;
+}
+.input-group {
+	width: 100%;
+	height: auto;
+	
+}
+.input-group__label {
+	display: block;
+	padding-left: 10px;
+	font-size: 20px;
+	letter-spacing: 0.05em;
+	color: #61677c;
+	text-shadow: 1px 1px 0 #fff;
+	margin-bottom: 8px;
+}
+.input-group__input {
+	display: block;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	width: 100%;
+	background-color: transparent;
+	font-size: 18px;
+	letter-spacing: 0.1em;
+	color: #61677c;
+	text-shadow: 1px 1px 0 #fff;
+	padding: 12px;
+	outline: none;
+	border: none;
+	border-radius: 30px;
+	box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+	transition: all 0.2s ease-in-out;
+}
+.input-group__input:focus {
+	box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+.button {
+	background-color: transparent;
+	color: #61677c;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 0.07em;
+	text-shadow: 1px 1px 0 #fff;
+	padding: 8px 20px;
+	border: 0;
+	border-radius: 30px;
+	box-shadow: 3px 3px 5px #babecc, -4px -4px 10px #fff;
+	outline: 0;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+.button:hover {
+	box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+.button:active {
+	box-shadow: inset 2px 2px 3px #babecc, inset -2px -2px 3px #fff;
+}
